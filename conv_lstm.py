@@ -120,6 +120,7 @@ inp_chans=3
 nlayers=2
 seq_len=4
 
+#If using this format, then we need to transpose in CLSTM
 input = Variable(torch.rand(batch_size,seq_len,inp_chans,shape[0],shape[1])).cuda()
 
 conv_lstm=CLSTM(shape, inp_chans, filter_size, num_features,nlayers)
