@@ -84,8 +84,8 @@ class CLSTM(nn.Module):
 
         """
 
-        #current_input = input.transpose(0, 1)#now is seq_len,B,C,H,W
-        current_input=input
+        current_input = input.transpose(0, 1)#now is seq_len,B,C,H,W
+        #current_input=input
         next_hidden=[]#hidden states(h and c)
         seq_len=current_input.size(0)
 
